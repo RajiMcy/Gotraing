@@ -21,4 +21,7 @@ func main() {
 		fmt.Println(msg)
 
 	}("going")
+
+	fmt.Scanln()
+	fmt.Println("done")
 }
