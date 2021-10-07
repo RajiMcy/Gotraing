@@ -55,7 +55,7 @@ func main() {
 	//constructing a readOp, sending it over
 	//the reads channel, and the receiving
 	//the result over the provided resp channel.
-	for r := 0; r < 100; r++ {
+	for r := 0; r < 10000; r++ {
 		go func() {
 			for {
 				read := &readOp{
@@ -69,7 +69,7 @@ func main() {
 		}()
 	}
 	//We start 10 writes as well, using a similar approach.
-	for w := 0; w < 10; w++ {
+	for w := 0; w < 1000; w++ {
 		go func() {
 			for {
 				write := &writeOp{
