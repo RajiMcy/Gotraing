@@ -22,6 +22,7 @@ func main() {
 
 	}("going")
 
+	// time.Sleep(1 * time.Second)
 	fmt.Scanln()
 	fmt.Println("done")
 }
