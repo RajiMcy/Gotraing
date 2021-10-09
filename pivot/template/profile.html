@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 80%;
+        }
+        tr,th{
+           
+        border: 2px solid #ddd;
+        padding: 8px;
+        }
+        tr:nth-child(even){background-color: #d6f0cd;}
+        tr:hover {background-color: rgb(173, 170, 170);}
+        th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #7fa5f1;
+        color: white;
+        }
+
+        
+        </style>
+</head>
+<body>
+    <h1 style="text-align:center;">SKILL DASHBOARD </h1> 
+    <a style="position:fixed;right:25px;top:20px;" href="/logout">Logout</a>
+    <h4 style="position:fixed;right:100px;top:1px;" >{{( index .Items 0).Attuid}}</h4>
+    
+
+    <h3>Welcome {{( index .Items 0).First_nm}}</h3>
+  
+    <br></br>
+    <table>
+        <tr>
+          <th>Skill Name</th>
+          <th>Proficiency</th>
+          <th>Version</th>
+          <th>IsPrimary</th>
+          <th>Total Exp</th>
+          <th>Last Used</th>
+
+        </tr>
+        {{range .Items}}
+
+        <tr>
+            <td>{{.Skill_nm}}</td>
+            <td>{{.Proficiency}}</td>
+            <td>{{.Version}}</td>
+            <td>{{.IsPrimary}}</td>
+            <td>{{.Total_exp}}</td>
+            <td>{{.Last_used}}</td>
+        </tr>
+        {{ end}}
+    </table>
+    <br></br>
+    <button type="submit">Add Skill</button>
+<!--
+    <h2>Welcome !!</h2>
+    {{if eq .Attuid "at593m"}}
+        <h3>&nbsp&nbsp&nbspYou have admin permission.</h3>
+    {{else}}
+        <h3>&nbsp&nbsp&nbspYou do not have admin permission.</h3>
+    {{end}}
+    <br></br>
+
+    <h2>&nbsp&nbsp&nbspSKILLS</h2>
+    <ul>
+        {{range .Skills}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+
+-->
+
+</body>
+</html>

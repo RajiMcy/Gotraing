@@ -1,0 +1,9 @@
+body {
+
+  background-image: url("wp.png");
+  background-size:cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat
+
+}
+
