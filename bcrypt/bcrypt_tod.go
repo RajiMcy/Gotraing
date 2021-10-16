@@ -8,7 +8,11 @@ import (
 
 func main() {
 
-	s := `Raji@242726`
+	//s := `Raji@242726`
+
+	var s string
+
+	fmt.Scanln(&s)
 
 	b, err := bcrypt.GenerateFromPassword([]byte(s), bcrypt.MinCost)
 
@@ -20,7 +24,10 @@ func main() {
 
 	fmt.Println(string(b))
 	fmt.Println(s)
-	loginPwd := `Raji@24272`
+	//loginPwd := `Raji@24272`
+
+	var loginPwd string
+	fmt.Scanln(&loginPwd)
 
 	err = bcrypt.CompareHashAndPassword(b, []byte(loginPwd))
 
